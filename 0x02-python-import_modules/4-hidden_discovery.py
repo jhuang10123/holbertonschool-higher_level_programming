@@ -7,8 +7,3 @@ if __name__ == "__main__":
     for i in hidden_list:
         if i[:2] != "__":
             print(i)
-'''
-    for i in range(len(hidden_list)):
-        if hidden_list[i][:2] != "__":
-            print(hidden_list[i])
-'''
