@@ -1,9 +1,6 @@
 #!/usr/bin/python3
-
-from sys import argv
-
-
-def main():
+if __name__ == "__main__":
+    from sys import argv
 
 # new list - copies argv withing 1st argument(command)
     args_list = argv[1:]
@@ -23,7 +20,3 @@ def main():
     for i in args_list:
         print("{}: {}".format(idx, args_list[idx - 1]))
         idx += 1
-
-
-if __name__ == "__main__":
-    main()
