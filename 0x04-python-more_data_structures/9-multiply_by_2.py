@@ -2,7 +2,7 @@
 
 
 def multiply_by_2(my_dict):
-    new = my_dict
+    new = my_dict.copy()
 
     for key in new:
         new[key] *= 2
