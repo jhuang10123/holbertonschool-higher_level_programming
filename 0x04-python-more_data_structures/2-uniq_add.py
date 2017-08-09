@@ -2,7 +2,9 @@
 
 
 def uniq_add(my_list=[]):
-    
     new = set(my_list)
-    for i in range(len(new)):
-        print (new)
+
+    for i in new:
+        print (i)
+
+    return sum(new)
