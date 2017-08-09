@@ -2,9 +2,6 @@
 
 
 def square_matrix_simple(matrix=[]):
-    new = []
+    list = [[row[i]**2 for i in range(len(row))] for row in matrix]
 
-    for row in matrix:
-        new += ([i**2 for i in row])
-
-    return new
+    return list
