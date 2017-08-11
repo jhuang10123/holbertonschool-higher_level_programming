@@ -5,6 +5,6 @@ def mutiply_list_map(my_list=[], number=0):
 
     result = my_list.copy()
 
-    result = list(map(lambda x: x*number, my_list))
+    result = list(map((lambda x: x*number), my_list))
 
     return result
