@@ -4,4 +4,3 @@ class Square:
     def __init__(self, size=0):
         """ size of square(private) """
         self.__size = size
-
