@@ -1,0 +1,4 @@
+Divides all elements of a matrix
+-----------------------------------
+
+# 

@@ -1,10 +1,19 @@
-Function that adds 2 integers.
+The ``add_integer(a, b)`` module
+======================
+
+Using ``addition with 2 integers``
+-------------------
+
+First import ``add_integer`` from the ``0-add_integer`` module:
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
-# Adding if both integers
+
+
+# Adding if both integers:
 >>> add_integer(1, 1)
 2
+
 
 
 # Add if a != int and a != float
@@ -12,6 +21,16 @@ Function that adds 2 integers.
 Traceback (most recent call last):
 	  ...
 TypeError: a must be an integer
+
+
+
+
+>>> add_integer("hi", "donuts")
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+
 
 
 # Add if a == float
