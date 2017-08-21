@@ -4,13 +4,18 @@ def text_indentation(text):
     """ prints a text with 2 new lines after
     each of those characters: ., ? and :"""
 
-    chars = ".,?"
+    if type(text) != str:
+        raise TypeError("text must be a string")
 
-    for i in range(len(text)-1):
 
-        for j in chars:
-            if text[i] == j:
-                print(j)
-                print()
-                i+=1
-        print(text[i], end="")
+    text = text.replace(".", ".\n\n")
+    text = text.replace(",", ",\n\n")
+    text = text.replace("?", "?\n\n")
+
+    print(text)
+
+    # chars = ['.', ',', '?']
+
+
+
+    # splited_str = text.split(".,?")
