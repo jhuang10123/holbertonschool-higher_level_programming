@@ -6,8 +6,11 @@ def text_indentation(text):
 
     chars = ".,?"
 
-    for i in text:
+    for i in range(len(text)-1):
+
         for j in chars:
-            if i == j:
+            if text[i] == j:
+                print(j)
                 print()
-        print(i, end="")
+                i+=1
+        print(text[i], end="")
