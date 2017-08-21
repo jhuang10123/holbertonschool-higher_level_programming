@@ -1,16 +1,15 @@
-The ``say_my_name(first_name, last_name="")`` module
-======================
-
-Using `` ``
--------------------
-
-First import ``say_my_name`` from the ``say_my_name`` module:
+import ``say_my_name`` from the ``say_my_name`` module:
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
+
+----------------------------------------------------------------------
 
 # normal output
 >>> say_my_name("John", "Smith")
 My name is John Smith
+
+
+----------------------------------------------------------------------
 
 # first name != string
 >>> say_my_name(123, "Smith")
@@ -19,12 +18,16 @@ Traceback (most recent call last):
 TypeError: first_name must be a string
 
 
+----------------------------------------------------------------------
+
 # last name != string
 >>> say_my_name("Bob", 456)
 Traceback (most recent call last):
           ...
 TypeError: last_name must be a string
 
+
+----------------------------------------------------------------------
 
 # no argument
 >>> say_my_name()
@@ -33,14 +36,20 @@ Traceback (most recent call last):
 TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
 
+----------------------------------------------------------------------
+
 # first name only:
 >>> say_my_name("Bob") # doctest: +NORMALIZE_WHITESPACE
 My name is Bob
 
 
+----------------------------------------------------------------------
 
 # more than 2  arguments
 >>> say_my_name("Bob", "Bobby", "Bobster")
 Traceback (most recent call last):
 	  ...
 TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+
+----------------------------------------------------------------------
