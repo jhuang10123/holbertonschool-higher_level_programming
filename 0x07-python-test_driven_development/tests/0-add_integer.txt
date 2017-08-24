@@ -1,0 +1,59 @@
+Function that adds 2 integers.
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# Adding if both integers
+>>> add_integer(1, 1)
+2
+
+
+# Add if a != int and a != float
+>>> add_integer("hi", "donuts")
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+
+# Add if a == float
+>>> add_integer(3.14, 7)
+10
+
+
+# Add if a == (-)
+>>> add_integer(-7, 2)
+-5
+
+
+# Add if b != int and  b != float
+>>> add_integer(9 , "donuts")
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
+
+
+# Add if b == float
+>>> add_integer(7, 3.14)
+10
+
+
+# Add if b == (-)
+>>> add_integer(7, -2)
+5
+
+
+# Add if both are negative
+>>> add_integer(-1, -5)
+-6
+
+
+# No arguments
+>>> add_integer()
+Traceback (most recent call last):
+	  ...
+TypeError: add_integer() missing 2 required positional arguments: 'a' and 'b'
+
+# 1 argumenr
+>>> add_integer(1)
+Traceback (most recent call last):
+	  ...
+TypeError: add_integer() missing 1 required positional argument: 'b'

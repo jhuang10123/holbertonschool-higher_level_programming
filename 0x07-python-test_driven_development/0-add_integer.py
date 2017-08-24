@@ -6,7 +6,7 @@ def add_integer(a, b):
 		raise TypeError("a must be an integer")
 	if type(b) != int and type(b) != float:
 		raise TypeError("b must be an integer")
-	if (a or b) == float:
+	if type(a) == float or type(b) == float:
 		return int(a) + int(b)
 	else:
 		return a + b
