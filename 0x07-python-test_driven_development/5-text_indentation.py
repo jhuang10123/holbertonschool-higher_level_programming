@@ -6,28 +6,11 @@ def text_indentation(text):
 
     if type(text) != str:
         raise TypeError("text must be a string")
-    count = 0
-    chars=[',', '.', '?']
-    for i in text:
-        if i in chars:
-            count+=1
 
-    for i in text:
+    text = text.replace(".", ".\n\n")
+    text = text.replace(",", ",\n\n")
+    text = text.replace("?", "?\n\n")
 
-    # chars = ",.?"
+    print(text)
 
-    # for i in range(len(text)-1):
-    #     for j in chars:
-    #         if text[i] == chars:
-    #             print (chars)
-    #             text = text.split(chars)
-    # print (text.split(",.?"))
-
-
-
-    # text = text.replace(".", ".\n\n")
-    # text = text.replace(",", ",\n\n")
-    # text = text.replace("?", "?\n\n")
-
-
-    # print("\n\n".join(text.split(".,?"), end=""))
+# need to fix spacing and new line at end
