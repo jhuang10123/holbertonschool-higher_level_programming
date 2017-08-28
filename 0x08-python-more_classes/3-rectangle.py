@@ -52,4 +52,4 @@ class Rectangle:
 
         str = ''.join(('#' * self.__width + '\n') * self.__height)
 
-        return str
+        return str[:-1]
