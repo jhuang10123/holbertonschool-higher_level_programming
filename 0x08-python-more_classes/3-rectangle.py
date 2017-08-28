@@ -47,4 +47,9 @@ class Rectangle:
 
     def __str__(self):
         """ returns string format of perimeter in '#'  """
-        return "".format ('#' * self.__width for i in range(self.__height))
+        if self.__height == 0 or self.__width == 0:
+            return ("")
+
+        str = ''.join(('#' * self.__width) * self.__height)
+
+        return str
