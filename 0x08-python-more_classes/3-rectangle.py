@@ -50,6 +50,6 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ("")
 
-        str = ''.join(('#' * self.__width + '\n') * self.__height)
+        s = ''.join(('#' * self.__width + '\n') * self.__height)
 
-        return str[:-1]
+        return s[:-1]
