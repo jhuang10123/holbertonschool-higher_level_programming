@@ -34,9 +34,9 @@ class Rectangle:
     def height(self, value):
         """ sets height to given value """
         if type(value) != int:
-            raise TypeError("width must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
@@ -54,9 +54,9 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ("")
 
-        str = ''.join(('#' * self.__width + '\n') * self.__height)
+        s = ''.join(('#' * self.__width + '\n') * self.__height)
 
-        return str[:-1]
+        return s[:-1]
 
     def __repr__(self):
         """ return a string representation of the rectangle"""
