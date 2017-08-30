@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def matrix_divided(matrix, div):
     """ returns new matrix with each element divided by div """
 
@@ -22,8 +23,7 @@ def matrix_divided(matrix, div):
                 i = round(res, 2)
                 temp.append(i)
             else:
-                raise TypeError("matrix must be a matrix\
-                (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
         new_matrix.append(temp)
 
     return new_matrix
