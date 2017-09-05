@@ -1,0 +1,9 @@
+First import ``MyList`` from the ``1-my_list.p`` module:
+>>> MyList = __import__('1-my_list').MyList
+
+
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list = [1, 4, 2, 3, 5]
+>>> MyList.print_sorted(my_list)
+[1, 2, 3, 4, 5]
