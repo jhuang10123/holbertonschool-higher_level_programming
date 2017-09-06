@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-
-with open(filename, 'r', encoding="UTF8") as file:
+def append_write(filename="", text=""):
+    with open(filename, 'a', encoding="UTF8") as file:
+        return file.write("{}".format(text))
