@@ -3,9 +3,10 @@
 
 
 class MyList(list):
-    """ prints sorted list """
+    """ includes method to print sorted list """
     def __init__(self):
         super().__init__()
 
     def print_sorted(self):
+        """prints sorted list """
         print(sorted(self))
