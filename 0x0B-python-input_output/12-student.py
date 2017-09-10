@@ -9,11 +9,14 @@ class Student():
 
     def to_json(self, attrs=None):
         """ retrieves a dictionary representation of a Student instance"""
-        self_dict = self.__dict__.copy
         new = {}
         if attrs is None:
-            return self.__dict__
+            return self.__dict__.copy()
+
         for i in attrs:
-            if i == self_dict[i]:
-                new.append(i)
-        return new.__dict__
+            try:
+                new[i] = self.__dict__[i]
+            except:
+                pass
+
+        return new
