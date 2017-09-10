@@ -5,7 +5,7 @@ def read_lines(filename="", nb_lines=0):
             print("{:s}".format(file.read(), end=""))
 
         for i in range(nb_lines):
-            print("{}".format(file.readline()))
+            print("{}".format(file.readline()), end="")
 
 """
 need to handle when out of range
