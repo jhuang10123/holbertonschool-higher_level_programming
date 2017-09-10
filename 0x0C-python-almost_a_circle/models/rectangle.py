@@ -7,10 +7,10 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
@@ -76,7 +76,9 @@ class Rectangle(Base):
         return ("[Rectangle] {} {}/{} - {}/{}".format(self.id, self.__x,\
         self.__y, self.__width, self.__height))
 
-    def update(self, *args):
+
+
+    def update(self, *args, **kwargs):
         """ assigns argument to attributes """
         for idx, arg in enumerate(args):
             if idx == 0:
@@ -90,11 +92,22 @@ class Rectangle(Base):
             elif idx == 4:
                 self.y = arg
 
-"""
-        att_list = ["id", "width", "height", "x", "y"]
-        new_dict = {}
-        for idx, arg in enumerate(args):
-            new_dict[att_list[idx]]= arg
-        self.__dict__.update(new_dict)
 
+        for key, val in kwargs.items():
+            if key == "id":
+                self.id = val
+            if key == "width":
+                self.width = val
+            if key == "height":
+                self.height = val
+            if key == "x":
+                self.x = val
+            if key == "y":
+                self.y = val
+"""
+should work, theoretially:
+        keydict={}
+        for key, val in kwargs.items():
+            keydict[key] = val
+        self.__dict__.update(keydict)
 """
