@@ -77,14 +77,23 @@ class Rectangle(Base):
         self.__y, self.__width, self.__height))
 
     def update(self, *args):
-        att_list = [self.id, self.width, self.height, self.x, self.y]
+        """ assigns argument to attributes """
+        att_list = ["id", "width", "height", "x", "y"]
+        new_dict = {}
+        for idx, arg in enumerate(args):
+#            print("idx = {}, arg = {}".format(idx, arg))
+            new_dict.update({att_list[idx]: arg})
+ #           print("new dict after update:",new_dict)
+        return new_dict
 
-        for arg in range(len(args)-1):
-            att_list[arg] = args[arg]
+
 """
-        self.__id = args[0]
-        self.__width = args[1]
-        self.__height = args[2]
-        self.__x = args[3]
-        self.__y = args[4]
+current output:
+vagrant0x0C-python-almost_a_circle$./7-main.py
+[Rectangle] 1 10/10 - 10/10
+[Rectangle] 1 10/10 - 10/10
+[Rectangle] 1 10/10 - 10/10
+[Rectangle] 1 10/10 - 10/10
+[Rectangle] 1 10/10 - 10/10
+[Rectangle] 1 10/10 - 10/10
 """
