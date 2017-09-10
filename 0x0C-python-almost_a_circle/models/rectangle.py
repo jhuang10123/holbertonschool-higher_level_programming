@@ -3,7 +3,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """ interited from class Base """
+    """ inherited from class Base """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
@@ -78,22 +78,25 @@ class Rectangle(Base):
 
     def update(self, *args):
         """ assigns argument to attributes """
+        for idx, arg in enumerate(args):
+            if idx == 0:
+                self.id = arg
+                print(idx, arg)
+                print("id = ", self.id)
+            elif idx == 1:
+                self.width = arg
+            elif idx == 2:
+                self.height = arg
+            elif idx == 3:
+                self.x = arg
+            elif idx == 4:
+                self.y = arg
+
+"""
         att_list = ["id", "width", "height", "x", "y"]
         new_dict = {}
         for idx, arg in enumerate(args):
-#            print("idx = {}, arg = {}".format(idx, arg))
-            new_dict.update({att_list[idx]: arg})
- #           print("new dict after update:",new_dict)
-        return new_dict
+            new_dict[att_list[idx]]= arg
+        self.__dict__.update(new_dict)
 
-
-"""
-current output:
-vagrant0x0C-python-almost_a_circle$./7-main.py
-[Rectangle] 1 10/10 - 10/10
-[Rectangle] 1 10/10 - 10/10
-[Rectangle] 1 10/10 - 10/10
-[Rectangle] 1 10/10 - 10/10
-[Rectangle] 1 10/10 - 10/10
-[Rectangle] 1 10/10 - 10/10
 """
