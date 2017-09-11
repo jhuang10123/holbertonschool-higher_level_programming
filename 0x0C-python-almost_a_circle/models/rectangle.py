@@ -96,15 +96,21 @@ class Rectangle(Base):
         for key, val in kwargs.items():
             if key == "id":
                 self.id = val
-            if key == "width":
+            elif key == "width":
                 self.width = val
-            if key == "height":
+            elif key == "height":
                 self.height = val
-            if key == "x":
+            elif key == "x":
                 self.x = val
-            if key == "y":
+            elif key == "y":
                 self.y = val
+
+    def to_dictionary(self):
+        dict_key = {"id":self.id, "width":self.width,\
+                    "height":self.height, "x":self.x, "y":self.y}
+        return dict_key
 """
+for **kwargs:
 should work, theoretially:
         keydict={}
         for key, val in kwargs.items():
