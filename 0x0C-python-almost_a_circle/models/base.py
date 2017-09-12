@@ -18,7 +18,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """returns the JSON representation of an object (string)"""
-        if list_dictionaries == None or len(list_dictionaries) == 0:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
@@ -61,8 +61,6 @@ class Base:
 
         dummy.update(**dictionary)
         return dummy
-
-
 
     # def load_from_file(cls):
     #     filename = cls.__name__.json
