@@ -75,10 +75,8 @@ class Rectangle(Base):
             print('#' * self.__width)
 
     def __str__(self):
-        return ("[Rectangle] {} {}/{} - {}/{}".format(self.id, self.__x,\
-        self.__y, self.__width, self.__height))
-
-
+        return ("[Rectangle] {} {}/{} - {}/{}".format(self.id, self.__x,
+                                                      self.__y, self.__width, self.__height))
 
     def update(self, *args, **kwargs):
         """ assigns argument to attributes """
@@ -94,7 +92,6 @@ class Rectangle(Base):
             elif idx == 4:
                 self.y = arg
 
-
         for key, val in kwargs.items():
             if key == "id":
                 self.id = val
@@ -108,9 +105,11 @@ class Rectangle(Base):
                 self.y = val
 
     def to_dictionary(self):
-        dict_key = {"id":self.id, "width":self.width,\
-                    "height":self.height, "x":self.x, "y":self.y}
+        dict_key = {"id": self.id, "width": self.width,
+                    "height": self.height, "x": self.x, "y": self.y}
         return dict_key
+
+
 """
 for **kwargs:
 should work, theoretially:

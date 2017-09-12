@@ -4,11 +4,12 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """ Square inherited from Rectangle """
+
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        return("[Square] ({}) {}/{} - {}".format(self.id, \
+        return("[Square] ({}) {}/{} - {}".format(self.id,
 
                                                  self.x, self.y, self.width))
 
@@ -18,7 +19,7 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value <= 0:
             raise ValueError("size must be > 0")
@@ -47,5 +48,5 @@ class Square(Rectangle):
                 self.y = val
 
     def to_dictionary(self):
-        dict_key = {"id":self.id, "size":self.size, "x":self.x, "y":self.y}
+        dict_key = {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
         return dict_key
