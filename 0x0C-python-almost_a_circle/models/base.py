@@ -70,11 +70,11 @@ class Base:
         try:
             with open(filename, 'w') as file:
                 content = file.read()
-                file = cls.from_json_string(content)
-        except BaseException:
+                json_ret = cls.from_json_string(content)
+        except:
             return []
 
 # update each element, add to list
-        for elem in file:
+        for elem in json_ret:
             new_list.append(cls.create(**elem))
         return new_list
