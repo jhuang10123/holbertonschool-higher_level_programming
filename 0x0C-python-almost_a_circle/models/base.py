@@ -64,6 +64,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """ updates attributes in class if exist """
         new_list = []
         filename = cls.__name__ + ".json"
 # attempt to open file, read content, and deserialize content
