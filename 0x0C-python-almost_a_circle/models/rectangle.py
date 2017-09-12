@@ -14,7 +14,6 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-
     @property
     def width(self):
         return self.__width
@@ -63,11 +62,9 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-
     def area(self):
         """ returns area of rectangle """
         return self.__height * self.__width
-
 
     def display(self):
         """ prints Rectangle instance with the character # to stdout """
@@ -79,13 +76,11 @@ class Rectangle(Base):
                 print(" ", end="")
             print('#' * self.__width)
 
-
     def __str__(self):
         """ updating __str__ """
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
-                                                      self.__y, self.__width,
-                                                      self.__height))
-
+                                                        self.__y, self.__width,
+                                                        self.__height))
 
     def update(self, *args, **kwargs):
         """ assigns argument to attributes """

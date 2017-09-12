@@ -29,9 +29,10 @@ class Base:
         filename = cls.__name__ + ".json"
 
         # convert each object in list_objs into dictionary
-        if list_objs != None:
+        if list_objs is not None:
             for each in list_objs:
-                # to_dictionary created in rectangle. access with cls.to_dictionary
+                # to_dictionary created in rectangle. access with
+                # cls.to_dictionary
                 add_to_dict = cls.to_dictionary(each)
 
                 # append each dictionary to a list
