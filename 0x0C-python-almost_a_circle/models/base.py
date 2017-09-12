@@ -69,7 +69,7 @@ class Base:
         filename = cls.__name__ + ".json"
 # attempt to open file, read content, and deserialize content
         try:
-            with open(filename, 'w') as file:
+            with open(filename, 'r') as file:
                 content = file.read()
                 json_ret = cls.from_json_string(content)
         except:
