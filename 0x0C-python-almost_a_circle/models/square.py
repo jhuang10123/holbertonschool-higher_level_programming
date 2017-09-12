@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"" class inherited from Rectangle """
+""" class inherited from Rectangle """
 from models.rectangle import Rectangle
 
 
