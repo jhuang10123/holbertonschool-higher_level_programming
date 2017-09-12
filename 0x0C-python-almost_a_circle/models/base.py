@@ -15,16 +15,17 @@ class Base:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
 
+"""
     @staticmethod
     def to_json_string(list_dictionaries):
-        """ returns the JSON representation of an object (string)"""
+  returns the JSON representation of an object (string)
         if list_dictionaries is None:
             return []
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """ writes the JSON string representation of list_objs to a file"""
+    writes the JSON string representation of list_objs to a file
         new_list = []
         filename = cls.__name__ + ".json"
 
@@ -44,7 +45,9 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """ deserializes and returns json_string(list of JSON string)"""
+      deserializes and returns json_string(list of JSON string)
         if json_string is None:
             return[]
         return json.loads(json_string)
+
+"""
