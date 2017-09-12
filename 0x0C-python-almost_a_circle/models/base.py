@@ -62,6 +62,19 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
-    # def load_from_file(cls):
-    #     filename = cls.__name__.json
-    #     with open(filename, 'w') as file:
+    @classmethod
+    def load_from_file(cls):
+        new_list = []
+        filename = cls.__name__ + ".json"
+# attempt to open file, read content, and deserialize content
+        try:
+            with open(filename, 'w') as file:
+                content = file.read()
+                file = cls.from_json_string(content)
+        except:
+            return []
+
+# update each element, add to list
+        for elem in file:
+           new_list.append(cls, **elem)
+        return new_list

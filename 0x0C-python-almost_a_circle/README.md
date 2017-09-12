@@ -5,9 +5,9 @@ In preparation for AirBnB project. This review covers:
 * Exceptions
 * Class
 * Private attribute
-* Getter/Setter
+* Getter / Setter
 * Class method
 * Static method
 * Inheritance
 * Unittest
-* Read/Write file
+* Read / Write file
