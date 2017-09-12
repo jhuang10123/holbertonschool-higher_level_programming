@@ -76,5 +76,5 @@ class Base:
 
 # update each element, add to list
         for elem in file:
-            new_list.append(cls, **elem)
+            new_list.append(cls, create(**elem))
         return new_list
