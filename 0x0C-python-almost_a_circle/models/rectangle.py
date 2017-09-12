@@ -86,9 +86,9 @@ class Rectangle(Base):
                                                       self.__y, self.__width,
                                                       self.__height))
 
-"""
+
     def update(self, *args, **kwargs):
-        # assigns argument to attributes
+        """ assigns argument to attributes """
         for idx, arg in enumerate(args):
             if idx == 0:
                 self.id = arg
@@ -113,6 +113,7 @@ class Rectangle(Base):
             elif key == "y":
                 self.y = val
 
+"""
     def to_dictionary(self):
         dict_key = {"id": self.id, "width": self.width,
                     "height": self.height, "x": self.x, "y": self.y}
