@@ -18,8 +18,8 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """returns the JSON representation of an object (string)"""
-        if list_dictionaries is None:
-            return []
+        if list_dictionaries == None or len(list_dictionaries) == 0:
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
@@ -39,10 +39,10 @@ class Base:
                 new_list.append(add_to_dict)
 
             # to_jason converts list of dicts to string
-            json_list = cls.to_json_string(new_list)
+            new_list = cls.to_json_string(new_list)
 
         with open(filename, 'w') as file:
-            file.write(json_list)
+            file.write(new_list)
 
     @staticmethod
     def from_json_string(json_string):
@@ -62,7 +62,8 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
-    def load_from_file(cls):
-        filename = cls.__name__.json
-        with open(filename, 'w') as file:
-            
+
+
+    # def load_from_file(cls):
+    #     filename = cls.__name__.json
+    #     with open(filename, 'w') as file:
