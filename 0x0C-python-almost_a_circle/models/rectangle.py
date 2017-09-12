@@ -14,6 +14,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+"""
     @property
     def width(self):
         return self.__width
@@ -79,7 +80,7 @@ class Rectangle(Base):
                                                       self.__y, self.__width, self.__height))
 
     def update(self, *args, **kwargs):
-        """ assigns argument to attributes """
+        # assigns argument to attributes
         for idx, arg in enumerate(args):
             if idx == 0:
                 self.id = arg
@@ -109,7 +110,7 @@ class Rectangle(Base):
                     "height": self.height, "x": self.x, "y": self.y}
         return dict_key
 
-
+"""
 """
 for **kwargs:
 should work, theoretially:
