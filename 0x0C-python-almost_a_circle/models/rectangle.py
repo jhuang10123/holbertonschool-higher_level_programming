@@ -113,13 +113,3 @@ class Rectangle(Base):
         dict_key = {"id": self.id, "width": self.width,
                     "height": self.height, "x": self.x, "y": self.y}
         return dict_key
-
-
-"""
-for **kwargs:
-should work, theoretially:
-        keydict={}
-        for key, val in kwargs.items():
-            keydict[key] = val
-        self.__dict__.update(keydict)
-"""

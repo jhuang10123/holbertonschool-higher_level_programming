@@ -50,3 +50,19 @@ class Base:
         if json_string is None:
             return[]
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ updating a class' attributes """
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+
+        dummy.update(**dictionary)
+        return dummy
+
+    def load_from_file(cls):
+        filename = cls.__name__.json
+        with open(filename, 'w') as file:
+            
