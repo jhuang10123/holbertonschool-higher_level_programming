@@ -24,17 +24,18 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-    """writes the JSON string representation of list_objs to a file"""
+        """writes the JSON string representation of list_objs to a file"""
         new_list = []
         filename = cls.__name__ + ".json"
 
         # convert each object in list_objs into dictionary
-        for each in list_objs:
-            # to_dictionary created in rectangle. access with cls.to_dictionary
-            add_to_dict = cls.to_dictionary(each)
+        if list_objs != None:
+            for each in list_objs:
+                # to_dictionary created in rectangle. access with cls.to_dictionary
+                add_to_dict = cls.to_dictionary(each)
 
-            # append each dictionary to a list
-            new_list.append(add_to_dict)
+                # append each dictionary to a list
+                new_list.append(add_to_dict)
 
             # to_jason converts list of dicts to string
             json_list = cls.to_json_string(new_list)
@@ -44,7 +45,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-"""      deserializes and returns json_string(list of JSON string)"""
+        """deserializes and returns json_string(list of JSON string)"""
         if json_string is None:
             return[]
         return json.loads(json_string)
