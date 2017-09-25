@@ -30,7 +30,6 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """ assigns/upsates class square attributes """
-
         if len(args):
             for i, val in enumerate(args):
                 if i == 0:
