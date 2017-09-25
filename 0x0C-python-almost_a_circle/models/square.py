@@ -9,6 +9,7 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """" inheriting attributes from Rectangle """
         super().__init__(size, size, x, y, id)
+        self.size = size
 
     def __str__(self):
         """updating __str__"""
@@ -26,27 +27,30 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+
     def update(self, *args, **kwargs):
         """ assigns/upsates class square attributes """
-        for idx, val in enumerate(args):
-            if idx == 0:
-                self.id = val
-            if idx == 1:
-                self.size = val
-            if idx == 2:
-                self.x == val
-            if idx == 3:
-                self.y == val
 
-        for key, val in kwargs.items():
-            if key == "id":
-                self.id = val
-            if key == "size":
-                self.size = val
-            if key == "x":
-                self.x = val
-            if key == "y":
-                self.y = val
+        if len(args):
+            for i, val in enumerate(args):
+                if i == 0:
+                    self.id = val
+                elif i == 1:
+                    self.size = val
+                elif i == 2:
+                    self.x = val
+                elif i == 3:
+                    self.y = val
+        else:
+            for key, val in kwargs.items():
+                if key == "id":
+                    self.id = val
+                if key == "size":
+                    self.size = val
+                if key == "x":
+                    self.x = val
+                if key == "y":
+                    self.y = val
 
     def to_dictionary(self):
         """Returns the dictionary representation of a Square """
