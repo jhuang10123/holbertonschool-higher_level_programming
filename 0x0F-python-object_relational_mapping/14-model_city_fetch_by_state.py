@@ -2,7 +2,7 @@
 """
 prints all City objects from the database hbtn_0e_14_usa
 """
-from model_state import Base
+from model_state import Base, State
 from model_city import City
 from sys import argv
 from sqlalchemy.orm import sessionmaker
@@ -18,5 +18,5 @@ if __name__ == "__main__":
     session = Session()
 
     for city in session.query(City).order_by(City.id).all():
-        print("{}: {}".format(city.id, city.name))
+        print("{}: ({}) {}".format(city.state_id, city.id, city.name))
     session.close()
