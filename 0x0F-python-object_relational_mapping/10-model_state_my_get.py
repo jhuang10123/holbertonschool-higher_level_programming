@@ -19,10 +19,9 @@ if __name__ == "__main__":
     session = Session()
 
     sess = session.query(State).filter(State.name == argv[4]).all()
+    if len(sess) == 0:
+        print("Not found")
     for elem in sess:
-        if elem is None:
-            print("Not found")
-        else:
-            print("{:d}".format(elem.id))
+        print("{:d}".format(elem.id))
 
         session.close()
