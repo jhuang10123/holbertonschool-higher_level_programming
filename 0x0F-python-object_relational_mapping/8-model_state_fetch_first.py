@@ -8,14 +8,17 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 
 if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(argv[1], argv[2], argv[3]))
+    ce = ('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(argv[1],
+                                                           argv[2],
+                                                           argv[3]))
+    engine = create_engine(ce)
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
     session = Session()
     first_sess = session.query(State).first()
 
-    if first_sess == None:
+    if first_sess is None:
         print("Nothing")
     else:
         print("{}: {}".format(first_sess.id, first_sess.name))
