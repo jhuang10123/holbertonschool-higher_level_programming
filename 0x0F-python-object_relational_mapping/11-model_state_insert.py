@@ -8,19 +8,19 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 
 
-if __name__ == "__main__":
-    ce = ('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(argv[1],
+
+ce = ('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(argv[1],
                                                            argv[2],
                                                            argv[3]))
-    engine = create_engine(ce)
-    Base.metadata.create_all(engine)
+engine = create_engine(ce)
+Base.metadata.create_all(engine)
 
-    Session = sessionmaker(bind=engine)
-    session = Session()
+Session = sessionmaker(bind=engine)
+session = Session()
 
-    new = State(name="Louisiana")
-    session.add(new)
-    session.commit()
-    print(new.id)
+new = State(name="Louisiana")
+session.add(new)
+session.commit()
+print(new.id)
 
-    session.close()
+session.close()
