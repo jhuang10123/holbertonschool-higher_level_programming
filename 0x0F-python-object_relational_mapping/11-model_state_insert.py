@@ -9,7 +9,6 @@ from sqlalchemy import create_engine
 
 
 if __name__ == "__main__":
-
     ce = ('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(argv[1],
                                                            argv[2],
                                                            argv[3]))
