@@ -14,10 +14,12 @@ if __name__ == "__main__":
                          db=argv[3])
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE '{}' ORDER BY id ASC".format(argv[4]))
+    cur.execute("SELECT cities.id, cities.name, states.name \
+    FROM cities, states WHERE cities.state_id=states.id \
+    ORDER BY cities.id ASC")
+
     query_rows = cur.fetchall()
     for row in query_rows:
-        if row == argv[4]:
-            print(row)
+        print(row)
     cur.close()
     db.close()
