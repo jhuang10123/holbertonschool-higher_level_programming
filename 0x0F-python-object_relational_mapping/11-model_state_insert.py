@@ -20,8 +20,9 @@ session = Session()
 
 new = State(name="Louisiana")
 session.add(new)
-session.commit()
+
 new = session.query(State).filter_by(State.name == "Louisiana").first()
 print(new.id)
 
+session.commit()
 session.close()
