@@ -1,3 +1,3 @@
 #!/bin/bash
 # takes in a URL and displays all HTTP methods the server will accept
-curl -si "$1" | grep Allowed: |
+curl -sI "$1" | grep Allow | cut -f1 -d ' ' --complement
