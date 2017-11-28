@@ -5,11 +5,12 @@
  as a parameter, and finally displays the body
  of the response.
 """
-import requests
-import sys
 
 
 if __name__ == "__main__":
+    import requests
+    import sys
     toadd = {'email': sys.argv[2]}
     url = sys.argv[1]
     req = requests.post(url, data=toadd)
+    print(req.text)

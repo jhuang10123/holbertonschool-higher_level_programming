@@ -2,10 +2,10 @@
 """
 fetches https://intranet.hbtn.io/status
 """
-import requests
 
 
 if __name__ == "__main__":
+    import requests
     req = requests.get('https://intranet.hbtn.io/status')
     tp = type(req.text)
     print("Body response:")

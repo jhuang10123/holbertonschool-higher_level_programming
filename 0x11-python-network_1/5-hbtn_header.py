@@ -4,10 +4,11 @@ takes in a URL, sends a request to the
 URL and displays the value of the variable
 X-Request-Id in the response header
 """
-import requests
-import sys
+
 
 if __name__ == "__main__":
+    import requests
+    import sys
     req = requests.get(sys.argv[1])
-    hd = req.headers['X-Request-Id', None]
+    hd = req.headers['X-Request-Id']
     print(hd)

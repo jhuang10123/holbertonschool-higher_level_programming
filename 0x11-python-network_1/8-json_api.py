@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-takes in a letter and sends a POST request to 
+takes in a letter and sends a POST request to
 """
 import requests
 import sys
@@ -12,6 +12,6 @@ if __name__ == "__main__":
         q = ""
     else:
         q = sys.argv[1]
-    param = {'search_user':q}
+    param = {'search_user': q}
     req = requests.post(url, params=param)
     print (req)
