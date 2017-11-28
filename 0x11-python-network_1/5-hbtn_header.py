@@ -9,5 +9,5 @@ import sys
 
 if __name__ == "__main__":
     req = requests.get(sys.argv[1])
-    hd = req.headers['X-Request-Id']
+    hd = req.headers['X-Request-Id', None]
     print(hd)
