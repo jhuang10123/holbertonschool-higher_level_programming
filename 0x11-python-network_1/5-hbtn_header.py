@@ -10,5 +10,5 @@ if __name__ == "__main__":
     import requests
     import sys
     req = requests.get(sys.argv[1])
-    hd = req.headers['X-Request-Id']
+    hd = req.headers["X-Request-Id"]
     print(hd)
