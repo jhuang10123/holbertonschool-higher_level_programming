@@ -12,6 +12,6 @@ if __name__ == "__main__":
     try:
         req = requests.get(sys.argv[1])
         hd = req.headers["X-Request-Id"]
-        print(req)
+        print(hd)
     except:
         pass
