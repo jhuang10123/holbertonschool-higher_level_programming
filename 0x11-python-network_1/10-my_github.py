@@ -18,5 +18,7 @@ if __name__ == "__main__":
             usr,
             pswrd))
 
-    if req.json() is not None:
+    try:
         print(req.json()['id'])
+    except BaseException:
+        pass
