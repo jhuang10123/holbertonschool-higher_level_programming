@@ -10,11 +10,11 @@ import sys
 
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    q=""
+    q = ""
     if len(sys.argv) > 1:
-        q=sys.argv[1]
+        q = sys.argv[1]
 
-    payload = {'q':q}
+    payload = {'q': q}
 
     req = requests.post(url, data=payload)
 
@@ -23,7 +23,6 @@ if __name__ == "__main__":
         if len(req_jsn) == 0:
             print("No result")
         else:
-            print("[{}] {}".format(req_jsn.get('id'),req_jsn.get('name')))
-    except:
-            print("Not a valid JSON")
-
+            print("[{}] {}".format(req_jsn.get('id'), req_jsn.get('name')))
+    except BaseException:
+        print("Not a valid JSON")
