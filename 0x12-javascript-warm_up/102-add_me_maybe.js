@@ -1,7 +1,6 @@
 #!/usr/bin/node
-// executes x times a function
-module.exports.callMeMoby = function (x, theFunction) {
-  for (let i = 0; i < x; i++) {
-    theFunction();
-  }
+//  increments and calls a function
+module.exports.addMeMaybe = function (number, theFunction) {
+  theFunction(number+1);
+
 };
