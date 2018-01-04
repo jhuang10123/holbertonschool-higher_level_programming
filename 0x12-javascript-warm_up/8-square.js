@@ -5,5 +5,5 @@ if (!sizeOfSqr) {
   console.log('Missing size');
 }
 for (let i = 0; i < sizeOfSqr; i++) {
-  console.log('x'.repeat(sizeOfSqr));
+  console.log('X'.repeat(sizeOfSqr));
 }
