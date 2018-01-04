@@ -9,6 +9,6 @@ if (!process.argv[2] || !process.argv[3]) { console.log(0); } else {
   // sort list from least to greatest
   list.sort();
   // find 2nd to last element in list
-  idx = list.length - 2;
+  let idx = list.length - 2;
   console.log(list[idx]);
 }
