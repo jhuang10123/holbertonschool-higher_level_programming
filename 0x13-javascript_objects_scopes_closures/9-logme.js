@@ -1,9 +1,9 @@
 #!/usr/bin/node
-exports.logMe = function (item){
-  let count = 0;
-  let fcn = function () {
-    console.log(count+ ':' + item);
-    count+=1;}
-
-  fcn();
+let count = 0;
+exports.logMe = function (item) {
+   let fcn = function () {
+    console.log(count + ':' + item);
+    count++;
+  };
+ return fcn();
 };
