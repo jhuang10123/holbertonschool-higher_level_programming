@@ -1,12 +1,11 @@
 #!/usr/bin/node
 const request = require('request');
-const url = 'http://swapi.co/api/films/' + process.argv[2]
-request.get(url, function(err, response, body) {
+const url = 'http://swapi.co/api/films/' + process.argv[2];
+request.get(url, function (err, response, body) {
   if (err) {
     console.log(err);
-  }
-  else {
+  } else {
     console.log(JSON.parse(body).title);
-//    console.log(response && response.statusCode);
+    //    console.log(response && response.statusCode);
   }
 });
