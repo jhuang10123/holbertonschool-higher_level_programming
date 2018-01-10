@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // class Rectangle that defines a rectangle
-//module.exports = class Rectangle {
+// module.exports = class Rectangle {
 // class Rectangle {
 //   constructor (w, h) {
 //     if (h > 0 && w > 0) {
@@ -30,10 +30,9 @@
 //   }
 // };
 
-
 const Square1 = require('./5-square');
 module.exports = class Square extends Square1 {
-  charPrint(c) {
+  charPrint (c) {
     if (typeof c === 'undefined' || !c) {
       c = 'X';
     }
