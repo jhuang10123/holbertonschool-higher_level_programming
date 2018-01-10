@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// check 5 & 6 
+// check 5 & 6
 
 const request = require('request');
 const url = 'http://swapi.co/api/films/';
