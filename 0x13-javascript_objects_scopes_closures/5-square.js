@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // class Rectangle that defines a rectangle
-//module.exports = class Rectangle {
+// module.exports = class Rectangle {
 class Rectangle {
   constructor (w, h) {
     if (h > 0 && w > 0) {
@@ -22,11 +22,10 @@ class Rectangle {
     this.width *= 2;
     this.height *= 2;
   }
-};
-
-module.exports = class square extends Rectangle {
-  constructor(size) {
-    super(size, size);
-  }
 }
 
+module.exports = class square extends Rectangle {
+  constructor (size) {
+    super(size, size);
+  }
+};
