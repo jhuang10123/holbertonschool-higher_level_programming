@@ -2,7 +2,7 @@
 // check 5 & 6
 
 const request = require('request');
-const url = 'http://swapi.co/api/films/';
+const url = process.argv[2] + '/';
 request
   .get(url, function (err, response, body) {
     if (err) {
