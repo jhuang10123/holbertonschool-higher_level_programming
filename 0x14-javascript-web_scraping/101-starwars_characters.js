@@ -8,6 +8,7 @@ request
     if (err) { console.log(err); } else {
       let film = JSON.parse(body);
       for (let person in film.characters) {
+//	console.log("person = ", person);
         let characterURL = film.characters[person];
         request.get(characterURL, function (err, response, body) {
           if (err) { console.log(err); } else { console.log(JSON.parse(body).name); }
