@@ -1,3 +1,3 @@
-$('DIV#read_header').click(function(){
-  $(UL.my_list).append($("<li></li>").text("Item"));
+$('DIV#update_header').on('click', function(){
+  $('header').replaceWith('<header>New Header!!!</header>');
 });
